@@ -4,6 +4,7 @@
 const video = document.getElementById('camera');
 const status = document.getElementById('status');
 const info = document.getElementById('info');
+const app = document.getElementById('app');
 
 // ===================================================
 // 2. On crée l'objet "Hands" de MediaPipe.
@@ -106,7 +107,7 @@ function onResults(results) {
   if (isHandOpen(landmarks)) {
     info.style.display = 'flex';
   } else {
-    style.display = 'none';
+    app.style.display = 'none';
     info.style.display = 'none';
   }
 
