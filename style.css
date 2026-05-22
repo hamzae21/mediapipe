@@ -1,6 +1,9 @@
-* { box-sizing: border-box; }
+* {
+  box-sizing: border-box;
+}
 
 body {
+  display: flex;
   font-family: system-ui, sans-serif;
   margin: 0;
   padding: 30px;
@@ -8,7 +11,9 @@ body {
   color: #222;
 }
 
-h1 { color: #0066cc; }
+h1 {
+  color: #0066cc;
+}
 
 /* La webcam en haut à droite */
 #camera {
@@ -19,7 +24,8 @@ h1 { color: #0066cc; }
   height: 165px;
   border: 3px solid #0066cc;
   border-radius: 10px;
-  transform: scaleX(-1); /* effet miroir */
+  transform: scaleX(-1);
+  /* effet miroir */
   background: #000;
   z-index: 100;
 }
@@ -35,7 +41,7 @@ h1 { color: #0066cc; }
   padding: 10px;
   border-radius: 8px;
   font-weight: bold;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
   z-index: 100;
 }
 
@@ -63,7 +69,7 @@ h1 { color: #0066cc; }
   padding: 20px 25px;
   margin: 15px 0;
   border-radius: 10px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
   max-width: 700px;
 }
 
