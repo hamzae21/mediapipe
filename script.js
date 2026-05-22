@@ -106,6 +106,7 @@ function onResults(results) {
   if (isHandOpen(landmarks)) {
     info.style.display = 'flex';
   } else {
+    style.display = 'none';
     info.style.display = 'none';
   }
 
