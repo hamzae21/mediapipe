@@ -1,9 +1,9 @@
 // ===================================================
 // 1. On récupère les éléments HTML qu'on va manipuler
 // ===================================================
-const video  = document.getElementById('camera');
+const video = document.getElementById('camera');
 const status = document.getElementById('status');
-const info   = document.getElementById('info');
+const info = document.getElementById('info');
 
 // ===================================================
 // 2. On crée l'objet "Hands" de MediaPipe.
@@ -59,12 +59,12 @@ function distance(a, b) {
 
 function isHandOpen(landmarks) {
   const wrist = landmarks[0];
-  const tips  = [8, 12, 16, 20];
-  const pips  = [6, 10, 14, 18];
+  const tips = [8, 12, 16, 20];
+  const pips = [6, 10, 14, 18];
   let extended = 0;
   for (let i = 0; i < tips.length; i++) {
     if (distance(landmarks[tips[i]], wrist) >
-        distance(landmarks[pips[i]], wrist)) {
+      distance(landmarks[pips[i]], wrist)) {
       extended++;
     }
   }
@@ -81,7 +81,7 @@ function isThumbAndIndexClosed(landmarks) {
   const indexFolded =
     distance(landmarks[8], wrist) < distance(landmarks[6], wrist);
 
-  const palmSize    = distance(landmarks[0], landmarks[5]);
+  const palmSize = distance(landmarks[0], landmarks[5]);
   const thumbFolded = distance(landmarks[4], landmarks[5]) < palmSize * 0.6;
 
   return indexFolded && thumbFolded;
@@ -94,7 +94,7 @@ function isThumbAndIndexClosed(landmarks) {
 function onResults(results) {
   // Aucune main détectée
   if (!results.multiHandLandmarks ||
-      results.multiHandLandmarks.length === 0) {
+    results.multiHandLandmarks.length === 0) {
     status.textContent = '🙈 Aucune main';
     return;
   }
