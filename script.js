@@ -106,6 +106,7 @@ function onResults(results) {
   // ✊ Sinon       → on la CACHE
   if (isHandOpen(landmarks)) {
     info.style.display = 'flex';
+    app.style.display = 'flex';
   } else {
     app.style.display = 'none';
     info.style.display = 'none';
